@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="time"></div>
+
+
+    <script>
+
+function call (){
+
+let T = new Date();
+ let h = T.getHours();
+ let m = T.getMinutes();
+ let s = T.getSeconds();
+
+ let total = h + "/" + m +"/"+ s;
+
+
+document.getElementById("time").innerHTML = total
+
+
+}
+
+ setInterval( call, 1000);
+
+    </script>
+</body>
+</html>

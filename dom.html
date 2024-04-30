@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+     
+        .btn{
+            height: 50px;
+            width: 200px;
+            font-size: 20px;
+        }
+        .bg-color{
+            color: white;
+            background-color: red;
+        }
+        
+    </style>
+    <body>
+    
+        <div class="box">
+            <button class="btn" onclick="check()">Click Me</button>
+            
+        </div>
+         <script>
+            function check(){
+                document.getElementsByClassName("btn")[0].classList.add("bg-color");
+            }
+    
+            
+         </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<style>
+    .container{
+        height: 100vh;
+        width:90vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn{
+        height: 60px;
+        width: 250px;
+        border-radius: 10px;
+        background-color: pink;
+       text-align: center;
+       font-size: 20px;
+       padding: 5px;
+       border:none;
+    }
+</style>
+<body>
+    <!-- Create a button that changes its text content to "Clicked!" when clicked by the user. -->
+
+    <div class="container">
+        <button class="btn" id="btn" onclick="check()">Click me to change the text 🥴</button>
+    </div>
+    <script>
+      
+function check(){
+    let btn = document.getElementById('btn');
+    btn.textContent ='✅ Change to clicked 🤩';
+}
+
+
+
+
+    </script>
+    
+</body>
+</html>

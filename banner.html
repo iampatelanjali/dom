@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </script>
+    <style>
+
+        #banner {
+        
+        width: 100%;
+        height: 200px;
+        background-color: lightblue;
+        text-align: center;
+        line-height: 200px;
+        font-size: 24px;
+        
+        }
+        
+        
+            </style>
+        </head>
+        <body>
+            <div id="banner">Banner 1</div>
+        
+        
+        
+            <script>
+        //Define an array of banner texts
+        let banners = ["Banner 1","Banner 2","Banner 3"];
+        let currentBannerIndex = 0;
+        
+        
+        
+          //function to change the banner text
+          function changeBanner() {
+        document.getElementById('banner').innerText = banners[currentBannerIndex];
+        currentBannerIndex = (currentBannerIndex + 1)% banners.length;
+        
+        
+        
+          }
+          changeBanner()
+        //change the banner every 1second 0r 1000mls
+        setInterval(changeBanner, 1000);
+        </script>
+</body>
+</html>

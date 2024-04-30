@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stopwatch</title>
+</head>
+<body>
+  <h1>Stopwatch</h1>
+  <p id="display">00:00:00</p>
+  <button id="startStopBtn" onclick="startStop()">Start</button>
+  <button id="resetBtn" onclick="reset()">Reset</button>
+
+  <script>
+    let startTime;
+    let running = false;
+    let interval;
+
+    function startStop() {
+      if (running) {
+        clearInterval(interval);
+        document.getElementById("startStopBtn").innerText = "Start";
+      } else {
+        startTime = new Date().getTime();
+        interval = setInterval(updateDisplay, 10);
+        document.getElementById("startStopBtn").innerText = "Stop";
+      }
+      running = !running;
+    }
+
+    function reset() {
+      clearInterval(interval);
+      running = false;
+      document.getElementById("display").innerText = "00:00:00";
+      document.getElementById("startStopBtn").innerText = "Start";
+    }
+
+    function updateDisplay() {
+      const currentTime = new Date().getTime();
+      const elapsedTime = currentTime - startTime;
+      const hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+      const minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+      const milliseconds = Math.floor((elapsedTime % 1000) / 10);
+      document.getElementById("display").innerText = formatTime(hours) + ":" + formatTime(minutes) + ":" + formatTime(seconds) + ":" + formatTime(milliseconds);
+    }
+
+    function formatTime(time) {
+      return time < 10 ? "0" + time : time;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+p{
+        font-size: 50px;
+    }
+
+
+    </style>
+</head>
+<body>
+
+
+
+    <p><span id="hour">00 </span>: <span id="min">00</span>: <span id="sec">00</span></p>
+    <script>
+
+
+// var now = new Date ();
+// console .log(now);
+
+// console.log(now.toDateString());
+
+// console.log(now.getDate());
+
+
+// console.log(now.getHours());
+
+// console.log(now.get());
+
+
+
+
+
+
+// console.log(now.getHours() + "/" + now.getMinutes() +"/" + now.getSeconds())
+
+
+
+
+
+function check(){
+            var x = document.getElementById("hour");
+            var y = document.getElementById("min");
+            var z = document.getElementById("sec");
+
+
+
+            var now = new Date();
+            var a = now.getHours();
+            var b = now.getMinutes();
+            var c = now.getSeconds();
+            // document.write(a,":",b,":",c);
+
+            x.innerHTML = a;
+            y.innerHTML = b;
+            z.innerHTML = c;
+
+
+            
+
+        }
+
+        setInterval(check,1000);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
